@@ -25,3 +25,6 @@ react + typescript + react-admin -> express-API + mongo-DB
 - `dts-gen`で型定義ファイルを生成したらプロパティ名が数字で始まるものが見つかりエラってたので正規表現でコメントアウト
   - `dts-gen -m react-admin`
   - `(const \d.*?;$)` -> `// $1`
+- `dts-gen`の型定義に JSX エレメントの記述がないのでエラる
+  - `JSX element type 'Admin' is not a constructor function for JSX elements.`
+- だめだこりゃ
