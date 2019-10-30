@@ -1,2 +1,3 @@
 # chat-admin
-react + next.js -> express-API + mongo-DB
+
+react + typescript -> express-API + mongo-DB
