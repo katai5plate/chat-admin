@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.b100e6da.chunk.css",
-    "main.js": "/static/js/main.fc395385.chunk.js",
-    "main.js.map": "/static/js/main.fc395385.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.b2207da2.js",
-    "runtime-main.js.map": "/static/js/runtime-main.b2207da2.js.map",
-    "static/js/2.b7cf1d08.chunk.js": "/static/js/2.b7cf1d08.chunk.js",
-    "static/js/2.b7cf1d08.chunk.js.map": "/static/js/2.b7cf1d08.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.52acecd7900aa5356adeb013fc70f26e.js": "/precache-manifest.52acecd7900aa5356adeb013fc70f26e.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.b100e6da.chunk.css.map": "/static/css/main.b100e6da.chunk.css.map",
-    "static/media/logo.svg": "/static/media/logo.25bf045c.svg"
+    "main.css": "/chat-admin/static/css/main.b100e6da.chunk.css",
+    "main.js": "/chat-admin/static/js/main.f0ad6027.chunk.js",
+    "main.js.map": "/chat-admin/static/js/main.f0ad6027.chunk.js.map",
+    "runtime-main.js": "/chat-admin/static/js/runtime-main.3e21510b.js",
+    "runtime-main.js.map": "/chat-admin/static/js/runtime-main.3e21510b.js.map",
+    "static/js/2.b7cf1d08.chunk.js": "/chat-admin/static/js/2.b7cf1d08.chunk.js",
+    "static/js/2.b7cf1d08.chunk.js.map": "/chat-admin/static/js/2.b7cf1d08.chunk.js.map",
+    "index.html": "/chat-admin/index.html",
+    "precache-manifest.c483801e351be5ad970a61bdae755138.js": "/chat-admin/precache-manifest.c483801e351be5ad970a61bdae755138.js",
+    "service-worker.js": "/chat-admin/service-worker.js",
+    "static/css/main.b100e6da.chunk.css.map": "/chat-admin/static/css/main.b100e6da.chunk.css.map",
+    "static/media/logo.svg": "/chat-admin/static/media/logo.25bf045c.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b2207da2.js",
+    "static/js/runtime-main.3e21510b.js",
     "static/js/2.b7cf1d08.chunk.js",
     "static/css/main.b100e6da.chunk.css",
-    "static/js/main.fc395385.chunk.js"
+    "static/js/main.f0ad6027.chunk.js"
   ]
 }

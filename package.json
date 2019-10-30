@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/katai5plate/chat-admin",
+  "homepage": "http://katai5plate.github.io/chat-admin",
   "license": "MIT",
   "scripts": {
     "start": "react-scripts start",
