@@ -3,9 +3,9 @@ import React from "react";
 import "./styles/App.css";
 
 import { Admin, Resource, ListGuesser } from "react-admin";
-import simpleRestProvider from "ra-data-simple-rest";
+import jsonServerProvider from "ra-data-json-server";
 
-const dataProvider = simpleRestProvider("http://jsonplaceholder.typicode.com");
+const dataProvider = jsonServerProvider("http://jsonplaceholder.typicode.com");
 
 const App: React.FC = () => {
   return (

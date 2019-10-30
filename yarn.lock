@@ -8559,10 +8559,10 @@ ra-core@^2.9.8:
     redux-saga "~0.16.0"
     reselect "~3.0.0"
 
-ra-data-simple-rest@^2.9.8:
+ra-data-json-server@^2.9.8:
   version "2.9.8"
-  resolved "https://registry.yarnpkg.com/ra-data-simple-rest/-/ra-data-simple-rest-2.9.8.tgz#3db1a245ddffffccdecb0dbc30c50c99e3994d61"
-  integrity sha512-/fJmtTMAt1LFdSuPNahtPwAs5GSpl+5yuZ5nCBtJVi/tJUcfb5TSC1joddZh1Op1TMSlUKZNHJ0E/9lbDygy4w==
+  resolved "https://registry.yarnpkg.com/ra-data-json-server/-/ra-data-json-server-2.9.8.tgz#8a8af11b71ecafd3049d14425b28bb449a8eea2f"
+  integrity sha512-exF2Wtvi4usS7aXyondW0IE4uNXPV0tZBakqT4RSWlayGFchOPOl484hV047TAnLmy3m0gjb3d1+Mv9PWMmKLw==
   dependencies:
     query-string "~5.1.1"
     ra-core "^2.9.8"

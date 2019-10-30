@@ -28,3 +28,12 @@ react + typescript + react-admin -> express-API + mongo-DB
 - `dts-gen`の型定義に JSX エレメントの記述がないのでエラる
   - `JSX element type 'Admin' is not a constructor function for JSX elements.`
 - だめだこりゃ
+
+### typescript を `create-react-app this-app --typescript` したプロジェクトから抜きたい
+
+- どうやら`react-scripts`側で `ts` か `tsx` がプロジェクト内にあると勝手に ts 化される仕様になっている模様
+
+### チュートリアル通りにやってるのに `react-admin` がデータを拾ってくれない
+
+- Network を見るとちゃんとデータは受信してる
+- `ra-data-simple-rest` じゃなくて `ra-data-json-server` にしたらうまくいった
