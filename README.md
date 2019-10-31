@@ -2,6 +2,19 @@
 
 react + typescript + react-admin -> express-API + sequelize + mysql
 
+## Usage
+
+```coffee
+yarn install
+
+# Client
+yarn start
+yarn build
+
+# API
+yarn api
+```
+
 ## つまった点
 
 ### ビルド先を指定できない
@@ -87,6 +100,23 @@ app.get("/posts", function(req, res) {
 
 - `window.location` でいけた
   - https://gist.github.com/jaytaylor/b14716671ae6a8cd057bd6d849670238
+
+### EditGuesser を入れてるのに編集画面に遷移しない
+
+- `GET_ONE` をちゃんと作ったらいけた
+  - https://github.com/marmelab/react-admin/tree/master/packages/ra-data-json-server
+
+### Router に props を渡したい
+
+- コンポーネントを ClassComponent にして、`() => <CC a={123} />`みたくする
+
+### Express で PUT の RequestPayload が受け取れない
+
+- `app.use(express.json());`
+
+### コンソールに出ないけど `Incorrect element` エラーが描画される
+
+- API 側の出力 JSON の ID が期待される ID とズレていた
 
 ## API メモ
 

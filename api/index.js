@@ -45,7 +45,7 @@ const tables = {
 };
 
 // app.use(express.urlencoded({ extended: false }));
-// app.use(express.json());
+app.use(express.json());
 app.use(cors());
 
 app.use(function(req, res, next) {
@@ -56,20 +56,54 @@ app.use(function(req, res, next) {
   next();
 });
 
+app.listen(DB_CONF.api.port, function() {
+  console.log(`Example app listening on port ${DB_CONF.api.port}`);
+  console.log(`http://localhost:${DB_CONF.api.port}/`);
+});
+
 app.get("/", function(req, res) {
   const data = [{ body: "hoge" }, { body: "huga" }];
   sendList(res, data);
 });
 
-app.get("/posts", function(req, res) {
+app.get("/posts/", function(req, res) {
+  console.log("GET_LIST", req.params);
   tables.posts.findAll().then(data => {
-    console.log(req.query);
     res.setHeader("X-Total-Count", data.length);
     res.send(data);
   });
 });
 
-app.listen(DB_CONF.api.port, function() {
-  console.log(`Example app listening on port ${DB_CONF.api.port}`);
-  console.log(`http://localhost:${DB_CONF.api.port}/`);
+app.get("/posts/:id", function(req, res) {
+  console.log("GET_ONE", req.params);
+  tables.posts
+    .findOne({ where: { id: req.params.id } })
+    .then(data => {
+      res.send(data);
+    })
+    .catch(error => {
+      res.send({ status: "ng", error });
+    });
+});
+
+app.put("/posts/:id", function(req, res) {
+  console.log("UPDATE", req.body, req.params);
+  tables.posts
+    .update(
+      {
+        username: req.body.username,
+        comment: req.body.comment
+      },
+      {
+        where: {
+          id: req.params.id
+        }
+      }
+    )
+    .then(data => {
+      res.send({ status: "ok", data });
+    })
+    .catch(error => {
+      res.send({ status: "ng", error });
+    });
 });
