@@ -2,9 +2,12 @@ import React from "react";
 // import logo from "./assets/logo.svg";
 import "./styles/App.css";
 
-import { Admin, Resource, ListGuesser } from "react-admin";
 import jsonServerProvider from "ra-data-json-server";
 import fakeServerProvider from "ra-data-fakerest";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+
+import ChatPage from "./components/pages/Chat";
+import AdminPage from "./components/pages/Admin";
 
 const dataProvider = (url => {
   const isLocalServer = /localhost/.test(window.location.href);
@@ -21,9 +24,15 @@ const dataProvider = (url => {
 
 const App: React.FC = () => {
   return (
-    <Admin dataProvider={dataProvider}>
-      <Resource name="posts" list={ListGuesser} />
-    </Admin>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={ChatPage} />
+        <Route
+          path="/admin/"
+          component={() => <AdminPage dataProvider={dataProvider} />}
+        />
+      </Switch>
+    </BrowserRouter>
   );
 };
 
