@@ -4,6 +4,27 @@ react + typescript + react-admin -> express-API + sequelize + mysql
 
 ## Usage
 
+### setup
+
+- `cinst -y mysql mysql.workbench`
+
+- Add `db-config.hide.json` in `./`
+
+```js
+{
+  "api": {
+    "port": 3001
+  },
+  "db": {
+    "name": "DB Name",
+    "user": "User Name",
+    "pass": "Password"
+  }
+}
+```
+
+### commands
+
 ```coffee
 yarn install
 
@@ -117,23 +138,3 @@ app.get("/posts", function(req, res) {
 ### コンソールに出ないけど `Incorrect element` エラーが描画される
 
 - API 側の出力 JSON の ID が期待される ID とズレていた
-
-## API メモ
-
-### MySQL
-
-- `cinst -y mysql mysql.workbench`
-
-```js
-// ./db-config.hide.json
-{
-  "api": {
-    "port": 3001
-  },
-  "db": {
-    "name": "DB名",
-    "user": "ユーザー名",
-    "pass": "パスワード"
-  }
-}
-```
