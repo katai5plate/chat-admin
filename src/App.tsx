@@ -11,10 +11,12 @@ const dataProvider = (url => {
   if (isLocalServer) {
     return jsonServerProvider(url);
   }
-  return fakeServerProvider([
-    { username: "hoge", comment: "hwapiojfaijpiawupiofemaipofwm" },
-    { username: "huga", comment: "ofwkofkweojwfijwefihjwefiohjd" }
-  ]);
+  return fakeServerProvider({
+    posts: [
+      { username: "hoge", comment: "hwapiojfaijpiawupiofemaipofwm" },
+      { username: "huga", comment: "ofwkofkweojwfijwefihjwefiohjd" }
+    ]
+  });
 })("http://localhost:3001");
 
 const App: React.FC = () => {
