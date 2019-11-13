@@ -1,5 +1,5 @@
 import React from "react";
-
+/// <reference path="./node_modules/react-admin/src/index.ts"/>
 import { Admin, Resource } from "react-admin";
 
 import { List as PostList, Edit as PostEdit } from "./Posts";
